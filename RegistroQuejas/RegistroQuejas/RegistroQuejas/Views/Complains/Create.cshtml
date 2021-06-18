@@ -1,0 +1,146 @@
+﻿@model RegistroQuejas.Models.Complain
+@{
+    ViewData["Title"] = "Nueva queja";
+}
+
+<h2>Añadir nueva queja</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create">
+            <div class="form-group">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="text-center">
+                    <h3>FORMATO DE ACOSO GENERAL</h3>
+                </div>
+                <div class="text-center">
+                    <h4>FAMGAR SAS</h4>
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label asp-for="QuejaFecha" class="control-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input asp-for="QuejaFecha" class="form-control" />
+                        <span asp-validation-for="QuejaFecha" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    FORMATO PARA INTERPONER QUEJAS POR ACOSO LABORAL O PRESENTAR SUGERENCIAS ANTE EL COMITE DE CONVIVENCIA LABORAL DE LA EMPRESA COBALSA LTDA
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label asp-for="QuejaNombre" class="control-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input asp-for="QuejaNombre" class="form-control" />
+                        <span asp-validation-for="QuejaNombre" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label asp-for="QuejaDni" class="control-label"></label>
+                    </div>
+                    <div class="col-auto">
+                        <input asp-for="QuejaDni" class="form-control" />
+                        <span asp-validation-for="QuejaDni" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto">
+                        <label asp-for="QuejaCopia" class="control-label"></label>
+                    </div>
+                    <div class="col-auto">
+                        <input asp-for="QuejaCopia" class="form-control" />
+                        <span asp-validation-for="QuejaCopia" class="text-danger"></span>
+                    </div>
+                    <div class="col-auto">
+                        <label asp-for="QuejaNum" class="control-label"></label>
+                    </div>
+                    <div class="col-auto">
+                        <input asp-for="QuejaNum" class="form-control" />
+                        <span asp-validation-for="QuejaNum" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label asp-for="QuejaDependencia" class="control-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input asp-for="QuejaDependencia" class="form-control" />
+                        <span asp-validation-for="QuejaDependencia" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label asp-for="QuejaCargo" class="control-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input asp-for="QuejaCargo" class="form-control" />
+                        <span asp-validation-for="QuejaCargo" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        <label asp-for="QuejaEmail" class="control-label"></label>
+                    </div>
+                    <div class="col-10">
+                        <input asp-for="QuejaEmail" class="form-control" />
+                        <span asp-validation-for="QuejaEmail" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    <label asp-for="QuejaQueja" class="control-label"></label>
+                </div>
+                <div class="table"></div>
+                <div class="col-auto">
+                    <input asp-for="QuejaQueja" class="form-control" />
+                    <span asp-validation-for="QuejaQueja" class="text-danger"></span>
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    Si usted quiere presentar una queja, diligencie los siguientes espacios. Si va a presentar una sugerencia diligencie solo el espacio diseñado para ese propósito.
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    <u>RELACION DE LOS HECHOS CONSTITUTIVOS DE LA QUEJA</u>
+                </div>
+                <div class="col-auto">
+                    <input asp-for="QuejaHechos" class="form-control" />
+                    <span asp-validation-for="QuejaHechos" class="text-danger"></span>
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    (De ser necesario el Comité podrá solicitarte posteriormente la ampliación de la información ofrecida)
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    ¿CUENTA USTED CON ALGUNA PRUEBA?(¿Cuál(es)?)
+                </div>
+                <div class="col-auto">
+                    <input asp-for="QuejaPrueba" class="form-control" />
+                    <span asp-validation-for="QuejaPrueba" class="text-danger"></span>
+                </div>
+                <div class="table"></div>
+
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Guardar" class="btn btn-primary" />
+                <a asp-action="Index" class="btn btn-warning">Regresar</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

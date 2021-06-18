@@ -1,0 +1,134 @@
+﻿@model RegistroQuejas.Models.Complain
+@{
+    ViewData["Title"] = "Detalles de la queja";
+}
+
+<h2>Detalles de esta queja</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Edit">
+            <div class="form-group">
+                
+                
+                <div class="text-center">
+                    <h3>FORMATO DE ACOSO GENERAL</h3>
+                </div>
+                <div class="text-center">
+                    <h4>FAMGAR SAS</h4>
+                </div>
+                <div class="row">
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model=>model.QuejaFecha)
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(model => model.QuejaFecha)
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    FORMATO PARA INTERPONER QUEJAS POR ACOSO LABORAL O PRESENTAR SUGERENCIAS ANTE EL COMITE DE CONVIVENCIA LABORAL DE LA EMPRESA COBALSA LTDA
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaNombre)
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(model => model.QuejaNombre)
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaDni)
+                    </div>
+                    <div class="col-auto">
+                        @Html.DisplayFor(model => model.QuejaDni)
+                    </div>
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaCopia)
+                    </div>
+                    <div class="col-auto">
+                        @Html.DisplayFor(model => model.QuejaCopia)
+                    </div>
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaNum)
+                    </div>
+                    <div class="col-auto">
+                        @Html.DisplayFor(model => model.QuejaNum)
+                    </div>
+
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaDependencia)
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(model => model.QuejaDependencia)
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaCargo)
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(model => model.QuejaCargo)
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="row">
+                    <div class="col-auto">
+                        @Html.DisplayNameFor(model => model.QuejaEmail)
+                    </div>
+                    <div class="col-10">
+                        @Html.DisplayFor(model => model.QuejaEmail)
+                    </div>
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    @Html.DisplayNameFor(model => model.QuejaQueja)
+                </div>
+                <div class="table"></div>
+                <div class="col-auto">
+                    @Html.DisplayFor(model => model.QuejaQueja)
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    Si usted quiere presentar una queja, diligencie los siguientes espacios. Si va a presentar una sugerencia diligencie solo el espacio diseñado para ese propósito.
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    <u>RELACION DE LOS HECHOS CONSTITUTIVOS DE LA QUEJA</u>
+                </div>
+                <div class="col-auto">
+                    @Html.DisplayFor(model => model.QuejaHechos)
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    (De ser necesario el Comité podrá solicitarte posteriormente la ampliación de la información ofrecida)
+                </div>
+                <div class="table"></div>
+                <div class="text-center">
+                    ¿CUENTA USTED CON ALGUNA PRUEBA?(¿Cuál(es)?)
+                </div>
+                <div class="col-auto">
+                    @Html.DisplayFor(model => model.QuejaPrueba)
+                </div>
+                <div class="table"></div>
+
+            </div>
+
+            <div class="form-group">
+                <a asp-action="Edit" class="btn btn-warning" asp-route-id="@Model.QuejaId">Editar</a>
+                <a asp-action="Index" class="btn btn-success">Regresar</a>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+
